@@ -1,6 +1,6 @@
 import React from "react";
 // import "ant/dist/antd.css";
-import { Table, Button } from "antd";
+import { Table, Button, Modal } from "antd";
 import { useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
@@ -78,8 +78,15 @@ const TableAntDesign = () => {
   };
 
   const onDeleteStudent = (record) => {
-    setDataSource((pre) => {
-      return pre.filter((student) => student.id !== record.id);
+    Modal.confirm({
+      title: "Are you sure, you want to delete this student record?",
+      okText: "Yes",
+      okType: "danger",
+      onOk: () => {
+        setDataSource((pre) => {
+          return pre.filter((student) => student.id !== record.id);
+        });
+      },
     });
   };
 
