@@ -54,7 +54,10 @@ const TableAntDesign = () => {
         return (
           <>
             <EditOutlined />
-            <DeleteOutlined style={{ color: "red", marginLeft: 15 }} />
+            <DeleteOutlined
+              onClick={() => onDeleteStudent(record)}
+              style={{ color: "red", marginLeft: 15 }}
+            />
           </>
         );
       },
@@ -71,6 +74,12 @@ const TableAntDesign = () => {
     };
     setDataSource((pre) => {
       return [...pre, newStudent];
+    });
+  };
+
+  const onDeleteStudent = (record) => {
+    setDataSource((pre) => {
+      return pre.filter((student) => student.id !== record.id);
     });
   };
 
