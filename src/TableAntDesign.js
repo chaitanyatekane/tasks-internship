@@ -25,6 +25,48 @@ const TableAntDesign = () => {
       email: "virat@gmail.com",
       address: "d2-pune",
     },
+    {
+      id: 4,
+      name: "Dhawan",
+      email: "dhawan@gmail.com",
+      address: "c4-bhenda",
+    },
+    {
+      id: 5,
+      name: "Bravo",
+      email: "bravo@gmail.com",
+      address: "d1-pune",
+    },
+    {
+      id: 6,
+      name: "Rohan",
+      email: "rohan@gmail.com",
+      address: "e4-newasa",
+    },
+    {
+      id: 7,
+      name: "Abhay",
+      email: "abhay@gmail.com",
+      address: "w2-pune",
+    },
+    {
+      id: 8,
+      name: "Kiran",
+      email: "kiran@gmail.com",
+      address: "d2-mumbai",
+    },
+    {
+      id: 9,
+      name: "Anand",
+      email: "anand@gmail.com",
+      address: "c2-pune",
+    },
+    {
+      id: 10,
+      name: "Amit",
+      email: "amit@gmail.com",
+      address: "r4-shevgaon",
+    },
   ]);
 
   const columns = [
@@ -104,8 +146,23 @@ const TableAntDesign = () => {
   return (
     <div className="tableAntDesign">
       <header className="tableAntDesignHeader">
-        <Button onClick={onAddStudent}>Add New Member</Button>
-        <Table columns={columns} dataSource={dataSource}></Table>
+        <Button
+          type="primary"
+          style={{
+            marginBottom: "35px",
+            paddingBottom: "10px",
+            fontWeight: "bolder",
+          }}
+          onClick={onAddStudent}
+        >
+          Add New Member
+        </Button>
+        <Table
+          columns={columns}
+          dataSource={dataSource}
+          pagination={{ pageSize: 5 }}
+          scroll={{ y: 240 }}
+        ></Table>
         <Modal
           title="Edit Student"
           visible={isEditing}

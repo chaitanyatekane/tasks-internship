@@ -4,11 +4,25 @@
   text-align: center;
 }
 
+.header-title {
+  padding-top: 15px;
+  color: rgb(228, 24, 24);
+}
+
+.tableAntDesign {
+  text-align: center;
+}
+
 .tableAntDesignHeader {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  /* max-width: 50%; */
+}
+
+.footer-title {
+  color: rgb(6, 6, 177);
 }
