@@ -2,6 +2,7 @@ import React from "react";
 // import "ant/dist/antd.css";
 import { Table, Button } from "antd";
 import { useState } from "react";
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
 
 const TableAntDesign = () => {
   const [dataSource, setDataSource] = useState([
@@ -45,6 +46,18 @@ const TableAntDesign = () => {
       title: "Address",
       dataIndex: "address",
       key: "4",
+    },
+    {
+      key: "5",
+      title: "Actions",
+      render: (record) => {
+        return (
+          <>
+            <EditOutlined />
+            <DeleteOutlined style={{ color: "red", marginLeft: 15 }} />
+          </>
+        );
+      },
     },
   ];
 
