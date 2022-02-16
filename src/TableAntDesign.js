@@ -67,6 +67,36 @@ const TableAntDesign = () => {
       email: "amit@gmail.com",
       address: "r4-shevgaon",
     },
+    {
+      id: 11,
+      name: "Sakshi",
+      email: "sakshi@gmail.com",
+      address: "b2-mumbai",
+    },
+    {
+      id: 12,
+      name: "Amruta",
+      email: "amruta@gmail.com",
+      address: "a1-kopargaon",
+    },
+    {
+      id: 13,
+      name: "Vaishnavi",
+      email: "vaishnavi@gmail.com",
+      address: "b7-bhenda",
+    },
+    {
+      id: 14,
+      name: "Rajnandani",
+      email: "rajnandani@gmail.com",
+      address: "c2-pune",
+    },
+    {
+      id: 15,
+      name: "Anushka",
+      email: "anushka@gmail.com",
+      address: "f3-mumbai",
+    },
   ]);
 
   const columns = [
@@ -74,25 +104,30 @@ const TableAntDesign = () => {
       title: "ID",
       dataIndex: "id",
       key: "1",
+      width: "10%",
     },
     {
       title: "Name",
       dataIndex: "name",
       key: "2",
+      width: "20%",
     },
     {
       title: "Email",
       dataIndex: "email",
       key: "3",
+      width: "20%",
     },
     {
       title: "Address",
       dataIndex: "address",
       key: "4",
+      width: "30%",
     },
     {
       key: "5",
       title: "Actions",
+      width: "20%",
       render: (record) => {
         return (
           <>
@@ -160,7 +195,7 @@ const TableAntDesign = () => {
         <Table
           columns={columns}
           dataSource={dataSource}
-          pagination={{ pageSize: 5 }}
+          pagination={{ pageSize: 5, position: "bottomCenter" }}
           scroll={{ y: 240 }}
         ></Table>
         <Modal

@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.ant-table-pagination-right {
+  justify-content: center;
+}
+
 .tableAntDesignHeader {
   min-height: 80vh;
   display: flex;
@@ -25,4 +29,8 @@
 
 .footer-title {
   color: rgb(6, 6, 177);
+}
+
+.ant-table-wrapper {
+  width: 70% !important;
 }
